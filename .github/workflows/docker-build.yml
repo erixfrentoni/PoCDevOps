@@ -18,7 +18,7 @@ jobs:
 
             - name: Build Docker
               run: |
-                docker login --username erixfrentoni --password ${{secrets.GHR_TOKEN}} ghcr.io
+                docker login --username erixfrentoni --password ${{secrets.DOCKER}} ghcr.io
                 docker build -t ghcr.io/erixfrentoni/testapp1:latest .
                 docker push ghcr.io/erixfrentoni/testapp1:latest  
 

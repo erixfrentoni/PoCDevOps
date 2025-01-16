@@ -18,7 +18,7 @@ jobs:
               with:
                 registry: ghcr.io
                 username: erixfrentoni
-                password: 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
+                password: ${{secrets.GHR_TOKEN}}
             
 
             - name: Setup docker

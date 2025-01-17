@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata: 
+  name: argo-script
+  namespace: argo
+spec:
+  entrypoint: main
+  templates:
+    - name: main
+      container:
+        image: ghcr.io/erixfrentoni/testapp1:latest
+        command: ["python", "app.py"]
+        imagePullSecrets:
+        - name: ghcr-secret2
